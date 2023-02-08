@@ -28,10 +28,7 @@ public class Bishop implements Piece{
 
     private boolean isLegal(int x, int y){
         boolean legal = true;
-        if((x-currentX)*(x-currentX) != 1){
-            legal = false;
-        }
-        else if((y-currentY)*(y-currentY) != 1){
+        if((x-currentX)*(x-currentX) != (y-currentY)*(y-currentY)){
             legal = false;
         }
         if(legal){
